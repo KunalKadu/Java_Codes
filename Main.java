@@ -1,22 +1,26 @@
-package Inheritance.Interfaces;
+package Polymorphism;
 
 public class Main {
     public static void main(String[] args) {
-        // Car c1 = new Car();
-        // c1.start();
-        // c1.acc();
-        // c1.stop();
+    //     shapes shape = new shapes();
+    //     shape.area();
+    //     shapes shape2 = new circle();
+    //     shape2.area();
+    //     triangle shape3 = new triangle();
+    //     shape3.area();
+    //     shapes shape4 = new square();
+    //     shape4.area();
+    // }
+    circle c= new circle();
+    c.area();
+    System.out.println(c instanceof shapes);// if object belong to class which is parent or child then return true
+    //(obj instance of subclass)    true
+    //(obj instance of obj)   true
+    //obj instance of parent    true
+    System.out.println(c.getClass());//return package name and class name to which object belong
 
-        // Car CarMed=new Car();
-        // CarMed.stop();// this will output I stop car engine like normal car 
-        // but we want to stop media not engine 
-        //to overcome this problem we create separate class that only implements media
-        
-        NiceCar car3=new NiceCar();
-        car3.start();
-        car3.startMusic();
-        car3.stopMusic();
-        car3.upgradeEngine(null);
-        car3.start();
-    }    
+    System.out.println(c.getClass().getConstructors());//gives list of constructors
+
+    System.out.println(c.getClass().getName()); //gives package.class name  
+}
 }
